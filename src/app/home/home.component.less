@@ -1,0 +1,20 @@
+.articles-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 150px 50px;
+
+    .articles-container {
+        width: 930px; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto; 
+        grid-column-gap: 150px; 
+        grid-row-gap: 10px;
+
+        .article-item:nth-child(even) {
+            margin-top: 150px;
+        }
+    }
+}

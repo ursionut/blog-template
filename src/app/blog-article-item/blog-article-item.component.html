@@ -1,8 +1,8 @@
-<div class="blog-item">
-    <div class="image-container">
-        <img class="item-image" src="./../../assets/images/huawei-nova.png" alt="phone-image">
+<div class="blog-item" (click)="showPost(id, title)">
+    <div class="image-container" [style.background]="bgColor">
+    <img class="item-image" src="./../../assets/images/{{ image }}" alt="phone-image">
     </div>
-    <p class="date-author"><span>01.01.2020</span> | By <span>Ionut Urs</span></p>
-    <p class="item-title">Material is an adaptable system of guidelines, components, and tools</p>
-    <a class="item-action">READ THE BLOG</a>
+    <p class="date-author"><span>{{ date }}</span> | By <span>{{ author }}</span></p>
+    <p class="item-title">{{ title }}</p>
+    <a class="item-action" [routerLink]="['/article', id, title]">READ THE BLOG</a>
 </div>
